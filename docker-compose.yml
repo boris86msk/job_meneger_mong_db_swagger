@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      - MONGODB_USER=
+      - MONGODB_PASSWORD=
+      - MONGODB_DATABASE=mongodb
+    volumes:
+      - db:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  db:
